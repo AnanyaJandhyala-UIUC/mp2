@@ -1,0 +1,160 @@
+.page {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.previous,
+.next {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  max-width: calc(50% - 0.4rem);
+  min-height: 3.2rem;
+  padding: 0.55rem 0.9rem;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 1px 0 rgba(48, 32, 18, 0.03);
+}
+
+.next {
+  margin-left: auto;
+  text-align: right;
+}
+
+.previous:hover,
+.next:hover {
+  border-color: #d5c8b8;
+  background: var(--accent-soft);
+}
+
+.pagerCopy {
+  display: grid;
+  min-width: 0;
+}
+
+.pagerLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.pagerTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 1.75rem;
+  align-items: start;
+}
+
+.frame {
+  background: #ebe4da;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.copy h1 {
+  margin: 0.3rem 0 0;
+  font-size: clamp(2.1rem, 4vw, 3.4rem);
+  overflow-wrap: anywhere;
+}
+
+.kicker {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.lede {
+  margin-top: 0.7rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.position {
+  margin-top: 0.35rem;
+  color: var(--muted);
+}
+
+.facts {
+  display: grid;
+  margin-top: 1.4rem;
+}
+
+.fact {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.8rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.fact dt {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.fact dd {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.missing {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.preserve {
+  white-space: pre-line;
+}
+
+.back {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin-top: 1.2rem;
+}
+
+.back a {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .pagerTitle {
+    display: none;
+  }
+
+  .previous,
+  .next {
+    max-width: none;
+    flex: 1;
+  }
+}

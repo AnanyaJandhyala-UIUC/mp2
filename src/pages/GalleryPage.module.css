@@ -1,0 +1,107 @@
+.page {
+  display: grid;
+  gap: 1.15rem;
+}
+
+.header h1 {
+  margin: 0.25rem 0 0;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.intro {
+  max-width: 38rem;
+  margin-top: 0.55rem;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+@media (max-width: 700px) {
+  .filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+  }
+
+  .chip,
+  .active {
+    flex: none;
+    white-space: nowrap;
+  }
+}
+
+.chip,
+.active {
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  font-weight: 650;
+  cursor: pointer;
+  text-align: left;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.chip:hover {
+  border-color: #d5c8b8;
+  background: var(--accent-soft);
+}
+
+.active {
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: white;
+}
+
+.active:hover {
+  background: var(--accent-dark);
+}
+
+.count {
+  color: var(--muted);
+}
+
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.15rem;
+}
+
+.grid > li {
+  display: flex;
+  min-width: 0;
+}
+
+.grid > li > a {
+  width: 100%;
+}
+
+.empty {
+  margin: 0;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+}

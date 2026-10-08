@@ -1,0 +1,85 @@
+:root {
+  --bg: #f3efe8;
+  --surface: #fffcf8;
+  --ink: #221e1a;
+  --muted: #5c564e;
+  --line: #e4dcd0;
+  --accent: #7c2f28;
+  --accent-dark: #5e221d;
+  --accent-soft: #f6e7e3;
+  --shadow: 0 14px 34px rgba(48, 32, 18, 0.08);
+  --radius: 18px;
+  --serif: 'Fraunces', 'Iowan Old Style', Palatino, Georgia, serif;
+  --sans: 'Source Sans 3', 'Avenir Next', 'Segoe UI', sans-serif;
+  color-scheme: light;
+  font: 17px/1.5 var(--sans);
+  color: var(--ink);
+  background:
+    radial-gradient(1000px 420px at 0% -10%, rgba(124, 47, 40, 0.08), transparent 55%),
+    var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  font-weight: 560;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+p,
+ul,
+dl {
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}

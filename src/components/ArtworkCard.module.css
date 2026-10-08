@@ -1,0 +1,48 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 1px 0 rgba(48, 32, 18, 0.03);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.card:hover img {
+  transform: scale(1.04);
+}
+
+.frame {
+  aspect-ratio: 4 / 5;
+}
+
+.copy {
+  display: grid;
+  gap: 0.3rem;
+  padding: 0.95rem 1rem 1.1rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.3rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.artist {
+  color: var(--muted);
+  font-weight: 600;
+}
